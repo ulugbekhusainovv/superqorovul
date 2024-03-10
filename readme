@@ -1,0 +1,26 @@
+Hello, the Bot I made removes ads and hidden links in Groups 👨🏻‍✈️
+
+Checks incoming and outgoing messages and even edited messages in a group and deletes if it's an ad🤖
+
+If the group does not have permission to delete messages, the bot will warn the group owner about the ad
+
+After opening the .env file to run the bot
+You open the variables named BOT_TOKEN,ADMINS,BOT and run app.py
+
+for example, like this one
+BOT_TOKEN=your bot token
+ADMINS= your telegram id
+BOT=your bot username
+
+
+<!-- for uzbek -->
+
+Salom men yasagan Bot reklamalarni, yashirin silkalarni Guruhlarda o'chirib beradi 👨🏻‍✈️
+
+Guruhdagi kirdi - chiqdi xabarlarini va hatto tahrirlangan xabarlarni tekshiradi va u reklama boʻlsa oʻchiradi🤖
+
+Agar guruhda botni xabarlarni o'chirishga ruxsati bo'lmasa guruh egasini reklamadan ogohlantiradi
+
+botni ishga tushirish uchun .env fayli ochib keyin 
+BOT_TOKEN,ADMINS,BOT nomli o'zgaruvchilar ochib olasiz va app.py ni ishga tushirasiz
+
