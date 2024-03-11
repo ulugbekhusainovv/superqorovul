@@ -1,4 +1,4 @@
-from filters import IsGroup,CheckBadWords, ContainsHiddenLink,IsBotDelete,IsBotAdmin, IsGroupAdmin, IsVideo
+from filters import IsGroup,CheckBadWords, ContainsHiddenLink,IsBotDelete,IsBotAdmin, IsGroupAdmin
 from aiogram import types, html
 from loader import dp,bot
 from aiogram.filters import CommandStart,Command
@@ -53,13 +53,6 @@ async def get_group_admins(chat_id):
 @dp.message(Command('stat'), IsGroup(), IsBotDelete())
 async def stat_del(message: types.Message):
     await message.delete()
-
-@dp.message(IsGroup(), IsBotDelete(), IsVideo(), ~IsGroupAdmin())
-async def stat_del(message: types.Message):
-    user = html.link(value=f"{message.from_user.full_name}", link=f"tg://user?id={message.from_user.id}")
-    alert = f"❗️{user} <b>iltimos video tashlamang!</b>"
-    await message.delete()
-    await message.answer(alert)
 
 @dp.message(CommandStart(), IsGroup(), ~IsGroupAdmin())
 async def start_bot(message:types.Message):
@@ -144,9 +137,7 @@ async def ads_delete(message):
                 InlineKeyboardButton(text="Refresh",callback_data=f"refresh:{group_id}"),
                 InlineKeyboardButton(text="Leave Chat", callback_data=f'leavechat:{group_id}'),
             ]
-        ]
-
-))
+        ]))
     user = html.link(value=f"{message.from_user.full_name}", link=f"tg://user?id={message.from_user.id}")
     alert = f"❗️{user} <b>iltimos reklama tarqatmang!</b>"
     user_id = message.from_user.id
