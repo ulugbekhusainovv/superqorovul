@@ -10,7 +10,7 @@ class IsGroupAdmin(BaseFilter):
 
         admins = await bot.get_chat_administrators(chat_id)
         admin_ids = [admin.user.id for admin in admins]
-        return user_id in admin_ids or await is_user_anonymous(chat_id=chat_id, user_id=user_id) or 777000
+        return user_id in admin_ids or await is_user_anonymous(chat_id=chat_id, user_id=user_id) or user_id == 777000
 
 
 async def is_user_anonymous(chat_id, user_id):
