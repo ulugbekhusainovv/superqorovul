@@ -1,4 +1,4 @@
-BAD_WORDS=['http', 'https', 'www','.com','@',"t.me",'lichka','bioda','profil',"+998","+996","aksiya","chegirma","taklif","bepul","reklama",'sotuvda']
+BAD_WORDS=['http', 'https', 'www','.com','@',"t.me"]
 
 from aiogram.filters import BaseFilter
 from aiogram import types
